@@ -21,26 +21,6 @@ const userSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    parentFirstName:{
-        type: String,
-        required: true
-    },
-    parentLastName:{
-        type: String,
-        required: true
-    },
-    parentMiddleName:{
-        type: String,
-        required: true
-    },
-    parentEmail:{
-        type: String,
-        // required: true
-    },
-    parentPhone:{
-        type: Number,
-        required: false
-    },
     address:{
         type: String,
         required: true
@@ -50,10 +30,6 @@ const userSchema = new mongoose.Schema({
         required: true
     },
     schoolClass:{
-        type: String,
-        required: true
-    },
-    schoolDepartment:{
         type: String,
         required: true
     },
