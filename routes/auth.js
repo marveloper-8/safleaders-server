@@ -14,15 +14,9 @@ router.post('/signup', (req, res) => {
         middleName,
         email,
         phone,
-        parentFirstName,
-        parentLastName,
-        parentMiddleName,
-        parentEmail,
-        parentPhone,
         address,
         school,
         schoolClass,
-        schoolDepartment,
         password
     } = req.body
     if(
@@ -31,15 +25,9 @@ router.post('/signup', (req, res) => {
         !middleName || 
         !email || 
         !phone || 
-        !parentFirstName || 
-        !parentLastName || 
-        !parentMiddleName || 
-        !parentEmail || 
-        !parentPhone || 
         !address ||  
         !school || 
         !schoolClass || 
-        !schoolDepartment || 
         !password
         ){
         return res.status(422).json({error: "Please add all the fields"})
@@ -57,15 +45,9 @@ router.post('/signup', (req, res) => {
                         middleName,
                         email,
                         phone,
-                        parentFirstName,
-                        parentLastName,
-                        parentMiddleName,
-                        parentEmail,
-                        parentPhone,
                         address,
                         school,
                         schoolClass,
-                        schoolDepartment,
                         password: hashedPassword,
 
                     })
@@ -106,15 +88,9 @@ router.post('/signin', (req, res) => {
                             middleName,
                             email,
                             phone,
-                            parentFirstName,
-                            parentLastName,
-                            parentMiddleName,
-                            parentEmail,
-                            parentPhone,
                             address,
                             school,
                             schoolClass,
-                            schoolDepartment
                         } = savedUser
                         return res.json({token, user:{
                             _id, 
@@ -123,15 +99,9 @@ router.post('/signin', (req, res) => {
                             middleName,
                             email,
                             phone,
-                            parentFirstName,
-                            parentLastName,
-                            parentMiddleName,
-                            parentEmail,
-                            parentPhone,
                             address,
                             school,
                             schoolClass,
-                            schoolDepartment
                         }})
                     }
                     else{
